@@ -48,7 +48,6 @@ Para probar el generador de claves seguras para sistemas de riego, sigue estos p
    * El historial de claves generadas se mostrará en la sección lateral.
    * Puedes borrar el historial haciendo clic en el botón con el icono de la papelera.
 
-## Estructura del Proyecto (Dentro del ZIP Extraído)
 
 ## Estructura del Proyecto
 ![image](https://github.com/user-attachments/assets/437005bc-722a-4cab-99e1-c65e256b8a40)
