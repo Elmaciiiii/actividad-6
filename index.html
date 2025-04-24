@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clave Segura Pro - Sistema de Riego</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <main class="generador-contenedor">
+            <h2>Generador de Claves Seguras para tu Riego 🔐</h2>
+            <section class="output">
+                <div class="clave-contenedor">
+                    <input type="text" id="claveGenerada" readonly>
+                    <span id="seguridadClave"></span>
+                </div>
+                <button id="copiar">Copiar</button>
+            </section>
+            <section class="config">
+                <fieldset>
+                    <legend>Opciones de Seguridad</legend>
+                    <div class="control-group rango-longitud">
+                        <label for="tam">Longitud de Clave: <span id="tamValor">10</span></label>
+                        <input type="range" id="tam" min="6" max="25" value="10">
+                    </div>
+                    <div class="control-group">
+                        <label><input type="checkbox" id="minus" checked> <span>Incluir Minúsculas</span></label>
+                    </div>
+                    <div class="control-group">
+                        <label><input type="checkbox" id="mayus"> <span>Incluir Mayúsculas</span></label>
+                    </div>
+                    <div class="control-group">
+                        <label><input type="checkbox" id="num" checked> <span>Incluir Números</span></label>
+                    </div>
+                    <div class="control-group">
+                        <label><input type="checkbox" id="simbolos"> <span>Incluir Símbolos</span></label>
+                    </div>
+                </fieldset>
+            </section>
+            <button id="generar">Generar Clave Segura</button>
+            <p id="mensajeError" class="mensaje-error oculto">Debes seleccionar al menos una opción para generar la clave.</p>
+        </main>
+        <aside class="historial-contenedor">
+            <div class="historial-header">
+                <h3>Historial de Claves</h3>
+                <button id="borrarHistorial" title="Borrar Historial"><i class="fas fa-trash-alt"></i></button>
+            </div>
+            <div class="historial-claves">
+                <ul id="listaHistorial">
+                    </ul>
+            </div>
+        </aside>
+    </div>
+    <div id="notificacion" class="notificacion">¡Clave copiada!</div>
+    <script src="main.js"></script>
+</body>
+</html>
